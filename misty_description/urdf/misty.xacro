@@ -1,0 +1,661 @@
+<?xml version="1.0" ?>
+<robot name="misty" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find misty_description)/urdf/misty.trans" />
+<xacro:include filename="$(find misty_description)/urdf/misty.gazebo" />
+
+<material name="silver">
+  <color rgba="0.700 0.700 0.700 1.000"/>
+</material>
+
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006560597959654544 7.164032145848273e-05 0.04328605258251663"/>
+    <mass value="3.876974836761401"/>
+    <inertia ixx="0.01133" ixy="1e-05" ixz="0.000388" iyy="0.018896" iyz="3e-06" izz="0.026529"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MIDDLE_LEFT_WHEEL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.37532252073471667 0.07491599608036578 -0.11963838591658377"/>
+    <mass value="0.008942480656590288"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.382014 0.006691 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/MIDDLE_LEFT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.382014 0.006691 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/MIDDLE_LEFT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="REAR_LEFT_WHEEL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.30682252073471655 0.14341599608042296 -0.11963838591658374"/>
+    <mass value="0.008942480656590273"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.382014 0.075191 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/REAR_LEFT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.382014 0.075191 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/REAR_LEFT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="REAR_RIGHT_WHEEL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.18562252073468966 0.0069659960804353965 -0.11963838591658374"/>
+    <mass value="0.008942480656590273"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.260814 0.075191 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/REAR_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.260814 0.075191 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/REAR_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="MIDDLE_RIGHT_WHEEL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.2541225207346897 -0.06153400391956494 -0.11963838591658375"/>
+    <mass value="0.008942480656590271"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.260814 0.006691 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/MIDDLE_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.260814 0.006691 -0.147284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/MIDDLE_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BODY_BASE_CONNECTOR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.20462570099775337 0.06158579628432593 -0.11365484517867298"/>
+    <mass value="0.049935327268042305"/>
+    <inertia ixx="4.2e-05" ixy="-0.0" ixz="-2e-05" iyy="0.00012" iyz="-0.0" izz="0.000142"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.263414 0.061691 -0.210284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BODY_BASE_CONNECTOR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.263414 0.061691 -0.210284"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BODY_BASE_CONNECTOR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BASE_RIGHT_COVER_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07260770667162066 -0.027150579842103395 -0.008699243845014581"/>
+    <mass value="0.14768918703590395"/>
+    <inertia ixx="0.000169" ixy="2.5e-05" ixz="7.5e-05" iyy="0.000849" iyz="-4.1e-05" izz="0.00079"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.062309 0.045 -0.074646"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BASE_RIGHT_COVER_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.062309 0.045 -0.074646"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BASE_RIGHT_COVER_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BASE_LEFT_COVER_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07255561628768126 0.027216822680745684 -0.00903210537434923"/>
+    <mass value="0.14825796927747048"/>
+    <inertia ixx="0.000172" ixy="-2.5e-05" ixz="7.5e-05" iyy="0.000855" iyz="4.1e-05" izz="0.000793"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.062309 -0.045 -0.074646"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BASE_LEFT_COVER_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.062309 -0.045 -0.074646"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BASE_LEFT_COVER_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="BASE_FRONT_GRILL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.038879412875070844 -0.04300095602839877 -0.009660031824725579"/>
+    <mass value="0.03355415414185703"/>
+    <inertia ixx="3.5e-05" ixy="0.0" ixz="1.8e-05" iyy="4.8e-05" iyz="-0.0" izz="5.9e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.039109 -0.043 -0.078796"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BASE_FRONT_GRILL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.039109 -0.043 -0.078796"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/BASE_FRONT_GRILL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Torso_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.03272040545912312 5.316962298534869e-05 0.05131658103431734"/>
+    <mass value="0.18906000011416796"/>
+    <inertia ixx="0.000417" ixy="0.0" ixz="3.9e-05" iyy="0.000548" iyz="-0.0" izz="0.000689"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0489 0.0 -0.114631"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/Torso_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0489 0.0 -0.114631"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/Torso_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="NECK_GLOBE_BASE_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.028967381185982542 -0.02342350968899399 0.03490947662313057"/>
+    <mass value="0.06380273615685639"/>
+    <inertia ixx="9.6e-05" ixy="0.0" ixz="-5e-06" iyy="9.4e-05" iyz="1e-06" izz="8.1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.034239 -0.0228 -0.198753"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/NECK_GLOBE_BASE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.034239 -0.0228 -0.198753"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/NECK_GLOBE_BASE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="HEAD_VENT_RIGHT_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.11573993268582174 -0.03256356197799625 -0.22426546819251014"/>
+    <mass value="0.008605757758849293"/>
+    <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="1e-06" iyz="0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.070814 0.032838 -0.485664"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/HEAD_VENT_RIGHT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.070814 0.032838 -0.485664"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/HEAD_VENT_RIGHT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="HEAD_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02109895951348825 -0.02204999387864766 -0.1398180546372746"/>
+    <mass value="0.2968917993248515"/>
+    <inertia ixx="0.001294" ixy="-6e-06" ixz="-4.3e-05" iyy="0.00117" iyz="-3.4e-05" izz="0.001579"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.018916 -0.024175 -0.437354"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/HEAD_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.018916 -0.024175 -0.437354"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/HEAD_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="EYE_LENS_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.08480546206650111 -0.08612204703053357 -0.19527794146654237"/>
+    <mass value="0.13471549430925892"/>
+    <inertia ixx="0.000218" ixy="-0.0" ixz="-3e-06" iyy="4.6e-05" iyz="0.0" izz="0.000193"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.002071 -0.086116 -0.472107"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/EYE_LENS_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.002071 -0.086116 -0.472107"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/EYE_LENS_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FACE_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0181619953636966 -0.09335613116776825 -0.18832345396442357"/>
+    <mass value="0.02220897264539794"/>
+    <inertia ixx="3.3e-05" ixy="-0.0" ixz="0.0" iyy="8e-06" iyz="-0.0" izz="2.5e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.074015 -0.093353 -0.468404"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/FACE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.074015 -0.093353 -0.468404"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/FACE_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="VISOR_GLASS_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0004252689692781225 3.9293780845994774e-07 0.01062713810442989"/>
+    <mass value="0.01618475582062509"/>
+    <inertia ixx="1.7e-05" ixy="-0.0" ixz="-0.0" iyy="1e-06" iyz="0.0" izz="1.7e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.092882 0.0 -0.313098"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/VISOR_GLASS_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.092882 0.0 -0.313098"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/VISOR_GLASS_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="HEAD_VENT_LEFT_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.016239122202264596 0.003317128142633838 -0.012970256320370743"/>
+    <mass value="0.008601083326649737"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="1e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.061242 -0.062552 -0.274473"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/HEAD_VENT_LEFT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.061242 -0.062552 -0.274473"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/HEAD_VENT_LEFT_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEFT_ARM_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.02912463794527921 0.013529199094012623 -0.008524139150373061"/>
+    <mass value="0.031754892803095174"/>
+    <inertia ixx="1.4e-05" ixy="-5e-06" ixz="8e-06" iyy="2.8e-05" iyz="3e-06" izz="2e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.017446 -0.071552 -0.171104"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/LEFT_ARM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.017446 -0.071552 -0.171104"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/LEFT_ARM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RIGHT_ARM_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.028999453853953583 -0.01685124115287527 -0.011525075237750232"/>
+    <mass value="0.03134177021944716"/>
+    <inertia ixx="1.5e-05" ixy="4e-06" ixz="8e-06" iyy="2.7e-05" iyz="-3e-06" izz="1.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.019113 0.068187 -0.172331"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/RIGHT_ARM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.019113 0.068187 -0.172331"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/RIGHT_ARM_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Battery_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.33703612338395506 -0.06493931916898676 -0.11813838591663256"/>
+    <mass value="0.5001101880416242"/>
+    <inertia ixx="0.00029" ixy="1e-06" ixz="0.0" iyy="0.000297" iyz="-0.0" izz="0.000447"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.321414 -0.065009 -0.175134"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/Battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.321414 -0.065009 -0.175134"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/Battery_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="RIGHT_ARM_CONNECTOR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00018193452656749265 -0.00652324319868379 -8.322442592700874e-05"/>
+    <mass value="0.027172748965990867"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="3e-06" iyz="-0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.004149 0.066216 -0.172618"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/RIGHT_ARM_CONNECTOR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.004149 0.066216 -0.172618"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/RIGHT_ARM_CONNECTOR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LEFT_ARM_CONNECTOR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0001670098430530155 0.006523521945876604 -8.215617760007343e-05"/>
+    <mass value="0.027172549960048142"/>
+    <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="3e-06" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.004149 -0.066216 -0.172618"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/LEFT_ARM_CONNECTOR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.004149 -0.066216 -0.172618"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/LEFT_ARM_CONNECTOR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FRONT_LEFT_WHEEL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.4352225186156042 0.011728209281953311 -0.1196382849296091"/>
+    <mass value="0.025418776956642474"/>
+    <inertia ixx="5e-06" ixy="0.0" ixz="0.0" iyy="8e-06" iyz="-0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.374914 -0.060309 -0.154784"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/FRONT_LEFT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.374914 -0.060309 -0.154784"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/FRONT_LEFT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FRONT_RIGHT_WHEEL_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.32822251861559876 -0.13234621712115296 -0.11963828492960912"/>
+    <mass value="0.0254187769566425"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="8e-06" iyz="0.0" izz="5e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.267914 -0.060309 -0.154784"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/FRONT_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.267914 -0.060309 -0.154784"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/FRONT_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.382014 -0.006691 0.147284"/>
+  <parent link="base_link"/>
+  <child link="MIDDLE_LEFT_WHEEL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev3" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.382014 -0.075191 0.147284"/>
+  <parent link="base_link"/>
+  <child link="REAR_LEFT_WHEEL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev4" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.260814 -0.075191 0.147284"/>
+  <parent link="base_link"/>
+  <child link="REAR_RIGHT_WHEEL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev5" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.260814 -0.006691 0.147284"/>
+  <parent link="base_link"/>
+  <child link="MIDDLE_RIGHT_WHEEL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.263414 -0.061691 0.210284"/>
+  <parent link="base_link"/>
+  <child link="BODY_BASE_CONNECTOR_1"/>
+</joint>
+
+<joint name="Rigid10" type="fixed">
+  <origin rpy="0 0 0" xyz="0.062309 -0.045 0.074646"/>
+  <parent link="base_link"/>
+  <child link="BASE_RIGHT_COVER_1"/>
+</joint>
+
+<joint name="Rigid11" type="fixed">
+  <origin rpy="0 0 0" xyz="0.062309 0.045 0.074646"/>
+  <parent link="base_link"/>
+  <child link="BASE_LEFT_COVER_1"/>
+</joint>
+
+<joint name="Rigid12" type="fixed">
+  <origin rpy="0 0 0" xyz="0.039109 0.043 0.078796"/>
+  <parent link="base_link"/>
+  <child link="BASE_FRONT_GRILL_1"/>
+</joint>
+
+<joint name="Rigid14" type="fixed">
+  <origin rpy="0 0 0" xyz="0.214514 0.061691 -0.095653"/>
+  <parent link="BODY_BASE_CONNECTOR_1"/>
+  <child link="Torso_1"/>
+</joint>
+
+<joint name="Rigid16" type="fixed">
+  <origin rpy="0 0 0" xyz="0.014661 0.0228 0.084122"/>
+  <parent link="Torso_1"/>
+  <child link="NECK_GLOBE_BASE_1"/>
+</joint>
+
+<joint name="Rigid17" type="fixed">
+  <origin rpy="0 0 0" xyz="0.08973 -0.057013 0.04831"/>
+  <parent link="HEAD_1"/>
+  <child link="HEAD_VENT_RIGHT_1"/>
+</joint>
+
+<joint name="Rigid35" type="fixed">
+  <origin rpy="0 0 0" xyz="0.015323 0.001375 0.238601"/>
+  <parent link="NECK_GLOBE_BASE_1"/>
+  <child link="HEAD_1"/>
+</joint>
+
+<joint name="Rigid20" type="fixed">
+  <origin rpy="0 0 0" xyz="0.016845 0.061941 0.034753"/>
+  <parent link="HEAD_1"/>
+  <child link="EYE_LENS_1"/>
+</joint>
+
+<joint name="Rigid21" type="fixed">
+  <origin rpy="0 0 0" xyz="0.076086 0.007237 -0.003703"/>
+  <parent link="EYE_LENS_1"/>
+  <child link="FACE_1"/>
+</joint>
+
+<joint name="Rigid22" type="fixed">
+  <origin rpy="0 0 0" xyz="0.111798 -0.024175 -0.124256"/>
+  <parent link="HEAD_1"/>
+  <child link="VISOR_GLASS_1"/>
+</joint>
+
+<joint name="Rigid29" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.042326 0.038377 -0.162881"/>
+  <parent link="HEAD_1"/>
+  <child link="HEAD_VENT_LEFT_1"/>
+</joint>
+
+<joint name="Rigid31" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.013297 0.005336 -0.001514"/>
+  <parent link="LEFT_ARM_CONNECTOR_1"/>
+  <child link="LEFT_ARM_1"/>
+</joint>
+
+<joint name="Rigid33" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.014964 -0.001971 -0.000287"/>
+  <parent link="RIGHT_ARM_CONNECTOR_1"/>
+  <child link="RIGHT_ARM_1"/>
+</joint>
+
+<joint name="Rigid34" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.321414 0.065009 0.175134"/>
+  <parent link="base_link"/>
+  <child link="Battery_1"/>
+</joint>
+
+<joint name="Rev35" type="continuous">
+  <origin rpy="0 0 0" xyz="0.044751 -0.066216 0.057987"/>
+  <parent link="Torso_1"/>
+  <child link="RIGHT_ARM_CONNECTOR_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev36" type="continuous">
+  <origin rpy="0 0 0" xyz="0.044751 0.066216 0.057987"/>
+  <parent link="Torso_1"/>
+  <child link="LEFT_ARM_CONNECTOR_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev37" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.374914 0.060309 0.154784"/>
+  <parent link="base_link"/>
+  <child link="FRONT_LEFT_WHEEL_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev38" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.267914 0.060309 0.154784"/>
+  <parent link="base_link"/>
+  <child link="FRONT_RIGHT_WHEEL_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+</robot>
