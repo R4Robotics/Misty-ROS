@@ -10,7 +10,7 @@
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
   <gravity>true</gravity>
 </gazebo>
 
@@ -46,140 +46,140 @@
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="BODY_BASE_CONNECTOR_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="BASE_RIGHT_COVER_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="BASE_LEFT_COVER_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="BASE_FRONT_GRILL_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="BASE_FRONT_GRILL_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="Torso_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="NECK_GLOBE_BASE_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="NECK_GLOBE_BASE_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="HEAD_VENT_RIGHT_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="HEAD_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="EYE_LENS_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="FACE_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="VISOR_GLASS_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="HEAD_VENT_LEFT_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="LEFT_ARM_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="RIGHT_ARM_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="Battery_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="RIGHT_ARM_CONNECTOR_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="LEFT_ARM_CONNECTOR_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="FRONT_LEFT_WHEEL_1">

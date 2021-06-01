@@ -1,43 +1,49 @@
-misty_controller:
-  # Publish all joint states -----------------------------------
-  joint_state_controller:
-    type: joint_state_controller/JointStateController
-    publish_rate: 50
+    # Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+    
+mobile_base_controller:
+  type        : "diff_drive_controller/DiffDriveController"
+  left_wheel  : 'Rev37'
+  right_wheel : 'Rev38'
+  publish_rate: 50.0               # default: 50
+  pose_covariance_diagonal : [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
+  twist_covariance_diagonal: [0.001, 0.001, 1000000.0, 1000000.0, 1000000.0, 1000.0]
 
-  # Position Controllers --------------------------------------
-  Rev2_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev2
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev3_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev3
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev4_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev4
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev5_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev5
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Ball19_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Ball19
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev35_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev35
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev36_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev36
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev37_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev37
-    pid: {p: 100.0, i: 0.01, d: 10.0}
-  Rev38_position_controller:
-    type: effort_controllers/JointPositionController
-    joint: Rev38
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+  # Wheel separation and diameter. These are both optional.
+  # diff_drive_controller will attempt to read either one or both from the
+  # URDF if not specified as a parameter
+  wheel_separation : 0.16045
+  wheel_radius : 0.0295
+
+  # Wheel separation and radius multipliers
+  wheel_separation_multiplier: 1.0 # default: 1.0
+  wheel_radius_multiplier    : 1.169491525 # default: 1.0
+
+  # Velocity commands timeout [s], default 0.5
+  cmd_vel_timeout: 0.25
+
+  # Base frame_id
+  base_frame_id: base_footprint #default: base_link
+
+  # Velocity and acceleration limits
+  # Whenever a min_* is unspecified, default to -max_*
+  linear:
+    x:
+      has_velocity_limits    : true
+      max_velocity           : 0.4275  # m/s
+      min_velocity           : -0.4275 # m/s
+      has_acceleration_limits: true
+      max_acceleration       : 0.8  # m/s^2
+      min_acceleration       : -0.4 # m/s^2
+      has_jerk_limits        : true
+      max_jerk               : 5.0  # m/s^3
+  angular:
+    z:
+      has_velocity_limits    : true
+      max_velocity           : 1.7  # rad/s
+      has_acceleration_limits: true
+      max_acceleration       : 1.5  # rad/s^2
+      has_jerk_limits        : true
+      max_jerk               : 2.5  # rad/s^3

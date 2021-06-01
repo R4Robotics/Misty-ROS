@@ -70,22 +70,22 @@
 <transmission name="Rev37_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="Rev37">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
   </joint>
   <actuator name="Rev37_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>21.5</mechanicalReduction>
   </actuator>
 </transmission>
 
 <transmission name="Rev38_tran">
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="Rev38">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
   </joint>
   <actuator name="Rev38_actr">
-    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+    <mechanicalReduction>21.5</mechanicalReduction>
   </actuator>
 </transmission>
 
