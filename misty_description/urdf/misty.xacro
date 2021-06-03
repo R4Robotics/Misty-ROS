@@ -36,7 +36,7 @@
 <link name="MIDDLE_LEFT_WHEEL_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <mass value="0.008942480656590288"/>
+    <mass value="0.00008942480656590271"/>
     <inertia ixx="1e-06" ixy="0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
@@ -46,18 +46,18 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!--collision>
     <origin rpy="0 0 0" xyz="0.008579863636 -0.0739125 -0.0339291812"/>
     <geometry>
       <mesh filename="package://misty_description/meshes/MIDDLE_LEFT_WHEEL_1.stl" scale="0.0012272727 0.0012272727 0.0012272727"/>
     </geometry>
-  </collision>
+  </collision!-->
 </link>
 
 <link name="REAR_LEFT_WHEEL_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <mass value="0.008942480656590273"/>
+    <mass value="0.00008942480656590273"/>
     <inertia ixx="1e-06" ixy="0.0" ixz="-0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
@@ -67,18 +67,18 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision> 
+  <!--collision> 
     <origin rpy="0 0 0" xyz="0.09227986364 -0.0739125 -0.03392918182"/>
     <geometry>
       <mesh filename="package://misty_description/meshes/REAR_LEFT_WHEEL_1.stl" scale="0.0012272727 0.0012272727 0.0012272727"/>
     </geometry>
-  </collision>
+  </collision-->
 </link>
 
 <link name="REAR_RIGHT_WHEEL_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <mass value="0.008942480656590273"/>
+    <mass value="0.00008942480656590273"/>
     <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="-0.0" izz="1e-06"/>
   </inertial>
   <visual>
@@ -88,10 +88,32 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="0.09227986364 0.0739125 -0.03392918182"/>
+  <!--collision>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
     <geometry>
-      <mesh filename="package://misty_description/meshes/REAR_RIGHT_WHEEL_1.stl" scale="0.0012272727 0.0012272727 0.0012272727"/>
+      <mesh filename="package://misty_description/meshes/REAR_RIGHT_WHEEL_1.stl" scale="0.0012272727 0.0012272727 0.0012272727">
+    </geometry>
+  </collision-->
+</link>
+
+<link name="BALANCE_WHEEL">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <mass value="0.01788496131"/>
+    <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="-0.0" izz="1e-06"/>
+  </inertial>
+  <!--visual>
+    <origin rpy="0 0 0" xyz="0.075191 0.0 -0.027646"/>
+    <geometry>
+      <mesh filename="package://misty_description/meshes/REAR_RIGHT_WHEEL_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual-->
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+    <geometry>
+      <sphere radius = "0.027"/>
+      <!--mesh filename="package://misty_description/meshes/REAR_RIGHT_WHEEL_1.stl" scale="0.0012272727 0.0012272727 0.0012272727"/-->
     </geometry>
   </collision>
 </link>
@@ -99,7 +121,7 @@
 <link name="MIDDLE_RIGHT_WHEEL_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <mass value="0.008942480656590271"/>
+    <mass value="0.00008942480656590271"/>
     <inertia ixx="1e-06" ixy="-0.0" ixz="0.0" iyy="2e-06" iyz="0.0" izz="1e-06"/>
   </inertial>
   <visual>
@@ -109,12 +131,12 @@
     </geometry>
     <material name="silver"/>
   </visual>
-  <collision>
+  <!--collision>
     <origin rpy="0 0 0" xyz="0.008579863636 0.0739125 -0.0339291812"/>
     <geometry>
       <mesh filename="package://misty_description/meshes/MIDDLE_RIGHT_WHEEL_1.stl" scale="0.0012272727 0.0012272727 0.0012272727"/>
     </geometry>
-  </collision>
+  </collision-->
 </link>
 
 <link name="BODY_BASE_CONNECTOR_1">
@@ -162,7 +184,7 @@
 <link name="BASE_LEFT_COVER_1">
   <inertial>
     <origin rpy="0 0 0" xyz="-0.07255561628768126 0.027216822680745684 -0.00903210537434923"/>
-    <mass value="0.14825796927747048"/>
+    <mass value="0.14768918703590395"/>
     <inertia ixx="0.000172" ixy="-2.5e-05" ixz="7.5e-05" iyy="0.000855" iyz="4.1e-05" izz="0.000793"/>
   </inertial>
   <visual>
@@ -393,7 +415,7 @@
 <link name="RIGHT_ARM_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0.014964 0 0.000287"/>
-    <mass value="0.03134177021944716"/>
+    <mass value="0.031754892803095174"/>
     <inertia ixx="1.5e-05" ixy="4e-06" ixz="8e-06" iyy="2.7e-05" iyz="-3e-06" izz="1.8e-05"/>
   </inertial>
   <visual>
@@ -456,7 +478,7 @@
 <link name="LEFT_ARM_CONNECTOR_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <mass value="0.027172549960048142"/>
+    <mass value="0.027172748965990867"/>
     <inertia ixx="2e-06" ixy="-0.0" ixz="0.0" iyy="3e-06" iyz="0.0" izz="2e-06"/>
   </inertial>
   <visual>
@@ -488,9 +510,10 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.07053086441 -0.07043262712 -0.04110294915"/>
+    <origin rpy="1.570796327 0 0" xyz="0 0.008 0"/>
     <geometry>
-      <mesh filename="package://misty_description/meshes/FRONT_LEFT_WHEEL_1.stl" scale="0.001169491525 0.001169491525 0.001169491525"/>
+      <cylinder length="0.024" radius="0.0345"/>
+      <!--mesh filename="package://misty_description/meshes/FRONT_LEFT_WHEEL_1.stl" scale="0.001169491525 0.001169491525 0.001169491525"/-->
     </geometry>
   </collision>
 </link>
@@ -498,7 +521,7 @@
 <link name="FRONT_RIGHT_WHEEL_1">
   <inertial>
     <origin rpy="0 0 0" xyz="0 0 0"/>
-    <mass value="0.0254187769566425"/>
+    <mass value="0.025418776956642474"/>
     <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="8e-06" iyz="0.0" izz="5e-06"/>
   </inertial>
   <visual>
@@ -509,14 +532,14 @@
     <material name="silver"/>
   </visual>
   <collision>
-    <origin rpy="0 0 0" xyz="-0.07053086441 0.07043262712 -0.04110294915"/>
+    <origin rpy="1.570796327 0 0" xyz="0 -0.008 0"/>
     <geometry>
-      <mesh filename="package://misty_description/meshes/FRONT_RIGHT_WHEEL_1.stl" scale="0.001169491525 0.001169491525 0.001169491525"/>
+      <!--mesh filename="package://misty_description/meshes/FRONT_RIGHT_WHEEL_1.stl" scale="0.001169491525 0.001169491525 0.001169491525"/-->
+      <cylinder length="0.024" radius="0.0345"/>
     </geometry>
   </collision>
 </link>
 
-  
 <link name="camera_link">
   <collision>
     <origin xyz = "0.07 0 0.05" rpy="0 0 0"/>
@@ -689,6 +712,13 @@
   <parent link="base_link"/>
   <child link="FRONT_RIGHT_WHEEL_1"/>
   <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev39" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.075191 -0.0 0.028646"/>
+  <parent link="base_link"/>
+  <child link="BALANCE_WHEEL"/>
+  <axis xyz="0 1.0 0"/>
 </joint>
 
 </robot>

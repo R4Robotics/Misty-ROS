@@ -67,28 +67,28 @@
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="REAR_LEFT_WHEEL_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="REAR_RIGHT_WHEEL_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="MIDDLE_RIGHT_WHEEL_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="BODY_BASE_CONNECTOR_1">
@@ -235,14 +235,21 @@
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 <gazebo reference="FRONT_RIGHT_WHEEL_1">
   <material>${body_color}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
-  <selfCollide>true</selfCollide>
+  <selfCollide>false</selfCollide>
+</gazebo>
+
+<gazebo reference="BALANCE_WHEEL">
+  <material>${body_color}</material>
+  <mu1>0.2</mu1>
+  <mu2>0.2</mu2>
+  <selfCollide>false</selfCollide>
 </gazebo>
 
 </robot>
