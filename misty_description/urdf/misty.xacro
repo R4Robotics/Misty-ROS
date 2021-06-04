@@ -561,12 +561,41 @@
   </inertial>
 </link>
 
+<link name="imu_sensor_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.02 0.02"/>
+    </geometry>
+  </collision>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.02 0.02 0.02"/>
+    </geometry>
+    <material name="iRobot/Red"/>
+  </visual>
+  <inertial>
+    <mass value="0.001" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.00000015" ixy="0" ixz="0" iyy="0.00000015" iyz="0" izz="0.00000015" />
+  </inertial>
+</link>
+
 <joint name = "camera_joint" type="fixed">
   <axis xyz="0.07 0 0.05" />
   <origin xyz="${camera_link} 0 0" rpy="0 0 0"/>
   <parent link="HEAD_1"/>
   <child link="camera_link"/>
 </joint>
+
+<joint name="imu_sensor_joint" type="fixed">
+  <axis xyz="0 0 1" />
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_sensor_link"/>
+</joint>
+
 
 <joint name="Rev2" type="continuous">
   <origin rpy="0 0 0" xyz="-0.006691 0.060225 0.028646"/>
